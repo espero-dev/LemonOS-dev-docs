@@ -41,7 +41,7 @@ void Button::DrawButtonLabel(surface_t* surface) {
     }
 }
 
-void PaintButton(surface_t* surface) {
+void Button::Paint(surface_t* surface) {
     if (pressed) {
         Lemon::Graphics::DrawRoundedRect(fixedBounds, Theme::Current().ColourBorder(), 5, 5, 5, 5, surface);
     } else {
