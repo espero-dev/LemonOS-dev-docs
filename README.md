@@ -1,5 +1,5 @@
 # Basic window drawing
-```
+```c++
 #include <Lemon/GUI/Window.h>
 #include <Lemon/Graphics/Graphics.h>
 #include <Lemon/Core/Keyboard.h>
