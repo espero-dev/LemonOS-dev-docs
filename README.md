@@ -96,14 +96,14 @@ int main(){
 
   Lemon::GUI::Bitmap* mod = new Lemon::GUI::Bitmap({60, 60, 40, 40}); // Rectangle clip test
   win->AddWidget(mod);
-  rect_t r1 = {10, 20, 300, 70};
-  rect_t r2 = {50, 10, 100, 60};
-  auto rClips = r1.Split(r2);
-  for(auto rect : rClips){
+  rect_t rt = {10, 20, 300, 70};
+  rect_t rp = {50, 10, 100, 60};
+  auto rClip = rt.Split(rp);
+  for(auto rect : rClip){
       Lemon::Graphics::DrawRect(rect, (rgba_colour_t){83, 0, 0, 142}, &drawBox->surface);
       Lemon::Button::Button* blue = new Lemon::Button::Button({60, 60, 40, 40});
   }
-  Lemon::Graphics::DrawRect(r2, {0, 255, 255, 255}, &drawBox->surface);
+  Lemon::Graphics::DrawRect(rp, {0, 255, 255, 255}, &drawBox->surface);
 
 	srand(time(nullptr));
 
